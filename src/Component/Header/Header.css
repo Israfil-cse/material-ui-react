@@ -1,0 +1,22 @@
+nav{
+    line-height: 60px;
+    display: inline;
+    
+
+}
+nav a{
+    text-decoration: none;
+    float: left;
+    margin-left: 60px;
+    
+}
+input{
+    padding: 11px 30px;
+    border-radius: 7px;
+    border:none;
+    background-color:lightgray;
+    margin-right: 10px;
+}
+.input_section{
+    margin-right: 270px;
+}

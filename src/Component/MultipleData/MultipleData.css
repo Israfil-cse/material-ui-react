@@ -1,0 +1,12 @@
+.multipleData_section{
+    background-color:lightgray;
+   display:flex;
+   justify-content: space-around;
+}
+
+.MuiCardActions-root {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+}

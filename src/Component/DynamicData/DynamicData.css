@@ -1,0 +1,48 @@
+.public_post{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    border-bottom: 1px solid #8ccae7;
+}
+.public_comment{
+    position: absolute;
+    left: 30px;
+    border-bottom: 1px solid #8ccae7;
+    bottom: 200px;
+}
+.comment_style{
+    position: relative;
+    margin-top: 250px;
+    margin-left: 100px;
+    width: 88%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f1ededed;
+    text-align: justify;
+    color:gray
+}
+.comment_img{
+    position : absolute;
+    top: 10px;
+    left: 10px;
+    height: 60px;
+    width: 60px;
+    border-radius:50%;
+}
+.comment_title{
+    position:  absolute;
+    left: 75px;
+}
+.comment_email{
+    position:  absolute;
+    top: 20px;
+    left: 75px;
+    
+} 
+.comment_body{
+    position:  absolute;
+    top: 70px;
+    left: 5px;
+    color: #474444;
+}
