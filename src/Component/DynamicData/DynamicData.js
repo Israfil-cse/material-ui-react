@@ -66,24 +66,23 @@ const DynamicData = () => {
   // comment api data load
   const [comment, setComment] = useState([]);
   useEffect(() => {
-    const url2 = `https://jsonplaceholder.typicode.com/comments/${id}`;
+    const url2 = `https://jsonplaceholder.typicode.com/comments?postId=${id}`;
     fetch(url2)
       .then(res => res.json())
       .then(data => setComment(data))
 
   }, []);
 
-// photos api data load
-const [photo, setPhoto] = useState([]);
-useEffect(() => {
-  const url3 = `https://jsonplaceholder.typicode.com/photos/${id}`;
-  fetch(url3)
-  .then(res => res.json())
-  .then(data => setPhoto(data))
-}, []);
+  // photos api data load
+  const [photo, setPhoto] = useState([]);
+  useEffect(() => {
+    const url3 = `https://jsonplaceholder.typicode.com/photos/${id}`;
+    fetch(url3)
+      .then(res => res.json())
+      .then(data => setPhoto(data))
+  }, []);
 
-  const {thumbnailUrl} = photo;
-  const { name, email } = comment;
+  const { thumbnailUrl } = photo;
   const { title, body } = data;
   return (
     <div>
@@ -101,7 +100,7 @@ useEffect(() => {
                 <MoreVertIcon />
               </IconButton>
             }
-            title= {`Id No:${id}`}
+            title={`Id No:${id}`}
             subheader="Publish: September 14, 2016"
           />
           <CardContent>
@@ -138,12 +137,16 @@ useEffect(() => {
         </Card>
       </div>
       <div className="comment">
-      <h2 className="public_comment">Comment :)</h2>
-        <div className="comment_style">
-        <img className="comment_img" src={thumbnailUrl} alt=""/>
-        <h5 className="comment_title">{name}</h5>
-        <h5 className="comment_email">{email}</h5>
-        <h3 className="comment_body">{body}</h3>
+        <h2 className="public_comment">Comment :)</h2>
+        <div>
+          {
+            comment.map(comment => <div className="comment_style">
+              <h5 className="comment_title">{comment.name}</h5>
+              <h5 className="comment_email">{comment.email}</h5>
+              <h3 className="comment_body">{comment.body}</h3>
+              <img className="comment_img" src={thumbnailUrl} alt="" />
+            </div>)
+          }
         </div>
       </div>
 

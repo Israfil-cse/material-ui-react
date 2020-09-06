@@ -5,14 +5,15 @@
     border-bottom: 1px solid #8ccae7;
 }
 .public_comment{
-    position: absolute;
+    position: relative;
+    top: 20px;
     left: 30px;
     border-bottom: 1px solid #8ccae7;
-    bottom: 200px;
+    width: 135px;
 }
 .comment_style{
     position: relative;
-    margin-top: 250px;
+    margin-top: 50px;
     margin-left: 100px;
     width: 88%;
     height: 200px;
