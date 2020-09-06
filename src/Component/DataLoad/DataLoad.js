@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MultipleData from '../MultipleData/MultipleData';
 
 const DataLoad = () => {
+    // post data load
     const [data, setData] = useState([]);
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -11,7 +12,7 @@ const DataLoad = () => {
     return (
         <div>
             {
-                data.map(data  => <MultipleData data={data}></MultipleData>)
+                data.map(data  => <MultipleData data={data}  key={data.id}></MultipleData>)
             }
         </div>
     );

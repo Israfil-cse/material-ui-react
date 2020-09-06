@@ -1,3 +1,5 @@
+// Multiple data means : you will see all post title in this component
+
 import React from 'react';
 import './MultipleData.css';
 import { makeStyles } from '@material-ui/core/styles';
@@ -19,8 +21,11 @@ const useStyles = makeStyles({
 });
 
 const MultipleData = (props) => {
+    // data Destructuring
     const data = props.data;
     const { title, id} = data;
+
+    // card component class
     const classes = useStyles();
     return (
 

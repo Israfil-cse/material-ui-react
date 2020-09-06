@@ -1,3 +1,5 @@
+//DynamicData means exact data, this element shows dynamically accurate post data when you click to see more buttons
+
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './DynamicData.css';
@@ -42,14 +44,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DynamicData = () => {
+
+  // These elements are helpful for card
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
+  // exact data load
   const { id } = useParams();
+
   const [data, setData] = useState([]);
   useEffect(() => {
     const url = `https://jsonplaceholder.typicode.com/posts/${id}`;
@@ -58,7 +63,7 @@ const DynamicData = () => {
       .then(data => setData(data))
   }, []);
 
-  // comment api
+  // comment api data load
   const [comment, setComment] = useState([]);
   useEffect(() => {
     const url2 = `https://jsonplaceholder.typicode.com/comments/${id}`;
@@ -68,7 +73,7 @@ const DynamicData = () => {
 
   }, []);
 
-// photos api
+// photos api data load
 const [photo, setPhoto] = useState([]);
 useEffect(() => {
   const url3 = `https://jsonplaceholder.typicode.com/photos/${id}`;
@@ -76,6 +81,7 @@ useEffect(() => {
   .then(res => res.json())
   .then(data => setPhoto(data))
 }, []);
+
   const {thumbnailUrl} = photo;
   const { name, email } = comment;
   const { title, body } = data;

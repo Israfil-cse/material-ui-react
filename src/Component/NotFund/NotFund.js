@@ -1,3 +1,5 @@
+// NotFund means : wrong directory
+
 import React from 'react';
 
 const NotFund = () => {

@@ -1,3 +1,5 @@
+// Home : this root component
+
 import React from 'react';
 import Header from '../Header/Header';
 import DataLoad from '../DataLoad/DataLoad';
